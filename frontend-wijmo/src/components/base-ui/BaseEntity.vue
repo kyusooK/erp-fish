@@ -23,12 +23,22 @@
             isUpdating: false,
             path: '/path',
             repository: null,
+            openDialog: false,
             updateCompanyDiagram: false,
         }),
         created(){
             if(this.value==null) this.value = {}
 
             this.repository = new BaseRepository(axios, this.path)
+        },
+        watch:{
+            openDialog:{
+                handler: function(newVal){
+                    if(!newVal){
+                        this.newValue = {};
+                    }
+                }
+            }
         },
         methods:{
             selectFile(){

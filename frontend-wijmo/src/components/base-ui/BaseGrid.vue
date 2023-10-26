@@ -23,7 +23,6 @@ export default {
         newValue: null,
         flex: null,
         tick : true,
-        openDialog : false,
         itemToEdit: null,
         selectedRow: null,
         path: 'path',
@@ -80,7 +79,6 @@ export default {
             }
         },
         addNewRow() {
-            this.newValue = null
             this.openDialog = true;
         },
         editSelectedRow() {
@@ -178,6 +176,7 @@ export default {
         append() {
             this.tick = false;
             this.openDialog = false
+            this.editMode = false
             this.$EventBus.$emit('changeSelected', this.openDialog)
             
             if (!this.value) {
@@ -187,6 +186,8 @@ export default {
 
             this.value.push(newItem);
             this.$emit('input', this.value);
+
+            this.newValue = {};
 
             this.$nextTick(() => {
                 this.tick = true;

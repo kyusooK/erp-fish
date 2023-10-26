@@ -58,6 +58,7 @@
             <wj-flex-grid-column binding="accountId" header="거래처" width="2*" :isReadOnly="true" align="center">
                 <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">   
                     <AccountId v-model="cell.item.accountId" :editMode="editMode"></AccountId>
+                    {{ cell.item.accountId.accountName }}
                 </wj-flex-grid-cell-template>
             </wj-flex-grid-column>
         </wj-flex-grid>

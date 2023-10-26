@@ -15,14 +15,11 @@ import org.springframework.beans.BeanUtils;
 @NoArgsConstructor
 public class PurchaseDetail {
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long unitPrice;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer qty;
 
     @Embedded
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private ItemId itemId;
 }
 //>>> DDD / Value Object

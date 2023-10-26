@@ -32,6 +32,7 @@
             <wj-flex-grid-column binding="itemId.name" header="ItemId" width="2*" :isReadOnly="true" align="center">
                 <wj-flex-grid-cell-template cellType="Cell" v-slot="cell">
                     <ItemId v-model="cell.item.itemId" :editMode="editMode"></ItemId>
+                    {{ cell.item.itemId.itemName }}
                 </wj-flex-grid-cell-template>
             </wj-flex-grid-column>
         </wj-flex-grid>

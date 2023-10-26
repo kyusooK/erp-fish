@@ -1,6 +1,6 @@
 <template>
     <div>
-        <String label="PurchaseType" v-model="value.purchaseType" :editMode="editMode"/>
+        <String label="매입구분" v-model="value.purchaseType" :editMode="editMode"/>
         <Date label="매입일자" v-model="value.purchaseDate" :editMode="editMode"/>
         <Date label="입고일자" v-model="value.warehouseArrivalDate" :editMode="editMode"/>
         <Date label="보관료부담일자" v-model="value.storageFeePaymentDate" :editMode="editMode"/>
